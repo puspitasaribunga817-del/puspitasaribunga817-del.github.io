@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bunga Puspita Sari - Profil Lengkap</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{background:#eef6f5;color:#1e2a28;line-height:1.6}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+a{color:#0f766e;text-decoration:none}
+
+/* HEADER */
+header{background:linear-gradient(135deg,#0f766e,#14b8a6,#06b6d4);color:#fff;border-radius:22px;padding:32px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;box-shadow:0 12px 30px rgba(15,118,110,.3)}
+.foto{width:160px;height:160px;border-radius:50%;border:6px solid #fff;object-fit:cover;background:#ddd;flex-shrink:0}
+header h1{font-size:34px;line-height:1.1}
+header .prodi{font-size:17px;opacity:.95;margin-top:6px}
+header .tagline{font-size:14px;opacity:.85;margin-top:8px;font-style:italic}
+.badges{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.badges span{background:#fff;color:#0f766e;padding:6px 12px;border-radius:99px;font-size:12px;font-weight:700}
+.btn-cv{display:inline-block;margin-top:14px;background:#111827;color:#fff;padding:11px 18px;border-radius:99px;font-size:14px;font-weight:700}
+.btn-cv:hover{background:#000}
+
+/* LAYOUT 2 KOLOM */
+.layout{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-top:18px}
+@media(max-width:800px){.layout{grid-template-columns:1fr} header{justify-content:center;text-align:center} .badges{justify-content:center}}
+
+.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 4px 20px rgba(0,0,0,.05);margin-bottom:16px}
+.card h2{color:#0f766e;font-size:19px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card h3{font-size:16px;margin-top:14px}
+.card p,.card li{font-size:14.5px;color:#374151}
+.card ul{padding-left:18px}
+.muted{color:#6b7280;font-size:13px}
+.tag{display:inline-block;background:#f0fdfa;border:1px solid #ccfbf1;color:#0f766e;padding:5px 10px;border-radius:99px;font-size:12px;font-weight:600;margin:4px 4px 0 0}
+
+/* TIMELINE */
+.timeline{border-left:3px solid #ccfbf1;padding-left:16px}
+.t-item{position:relative;margin-bottom:18px}
+.t-item:before{content:"";position:absolute;left:-23px;top:5px;width:11px;height:11px;background:#14b8a6;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 3px #ccfbf1}
+.t-item b{font-size:15px}
+.t-item .tahun{color:#0f766e;font-weight:700;font-size:13px}
+
+/* SKILL BAR */
+.skill{margin:10px 0}
+.skill-top{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.bar{background:#e5e7eb;height:9px;border-radius:99px;overflow:hidden;margin-top:5px}
+.fill{height:100%;background:linear-gradient(90deg,#14b8a6,#06b6d4);width:0;transition:1s}
+
+/* TUJUAN KARIR */
+.tujuan{background:linear-gradient(135deg,#0f766e,#06b6d4);color:#fff;border-radius:18px;padding:24px;margin-bottom:16px}
+.tujuan h2{color:#fff}
+.tujuan p{color:#e0f2f1;font-size:15px}
+.tujuan ol{padding-left:18px;margin-top:10px}
+.tujuan li{margin-bottom:6px}
+
+/* KONTAK */
+.kontak a{display:block;background:#f0fdfa;border:1px solid #ccfbf1;padding:12px 14px;border-radius:12px;margin-bottom:10px;font-weight:600;font-size:14px}
+.kontak a:hover{background:#ccfbf1}
+
+/* TABS */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tabs button{border:0;padding:9px 16px;border-radius:99px;background:#fff;cursor:pointer;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tabs button.active{background:#0f766e;color:#fff}
+.tab-content{display:none;animation:fade .3s}
+.tab-content.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* GALERI */
+.galeri{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.galeri img{width:100%;height:130px;object-fit:cover;border-radius:12px;cursor:pointer}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+#modeBtn{border:0;background:#111827;color:#fff;padding:10px 16px;border-radius:99px;cursor:pointer}
+body.dark{background:#0f172a;color:#e5e7eb}
+body.dark .card,body.dark .tabs button{background:#1e293b;color:#e5e7eb}
+body.dark .card p,body.dark .card li{color:#cbd5e1}
+body.dark .kontak a{background:#1e293b;border-color:#334155;color:#5eead4}
+body.dark .bar{background:#334155}
+#popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);align-items:center;justify-content:center;z-index:99}
+#popup img{max-width:90%;max-height:85%;border-radius:14px}
+#popup span{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="topbar">
+  <h3>🌸 Profil Bunga</h3>
+  <button id="modeBtn" onclick="gantiMode()">🌙 Dark Mode</button>
+</div>
+
+<!-- HEADER -->
+<header>
+  <img class="foto" src="its me.jpeg" alt="Bunga Puspita Sari" onerror="this.src='https://via.placeholder.com/400x400?text=Bunga+Puspita+Sari'">
+  <div style="flex:1;min-width:280px">
+    <h1>Bunga Puspita Sari</h1>
+    <p class="prodi">Mahasiswi S1 Sistem Informasi | Universitas Mandiri Subang</p>
+    <p class="tagline">"Ingin memanfaatkan teknologi untuk memajukan desa dan membantu banyak orang."</p>
+    <div class="badges">
+      <span>🎓 Sistem Informasi</span>
+      <span>📍 Subang, Jawa Barat</span>
+      <span>💻 Tertarik IT & Data Analyst</span>
+    </div>
+    <br>
+    <a class="btn-cv" href="https://wa.me/6285609548338?text=Halo%20Bunga,%20aku%20lihat%20profilmu" target="_blank">💬 Hubungi Bunga</a>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- KOLOM KIRI -->
+  <div>
+    <!-- BIODATA -->
+    <div class="card">
+      <h2>👤 Biodata Diri</h2>
+      <p><b>Nama Lengkap:</b><br>Bunga Puspita Sari</p>
+      <p style="margin-top:10px"><b>Tempat, Tanggal Lahir:</b><br>Subang, 21 Juli 2004</p>
+      <p style="margin-top:10px"><b>Jenis Kelamin:</b><br>Perempuan</p>
+      <p style="margin-top:10px"><b>Agama:</b><br>Islam</p>
+      <p style="margin-top:10px"><b>Status:</b><br>Mahasiswi Aktif</p>
+      <p style="margin-top:10px"><b>Kewarganegaraan:</b><br>Indonesia</p>
+    </div>
+
+    <!-- ALAMAT -->
+    <div class="card">
+      <h2>📍 Alamat Lengkap</h2>
+      <p><b>Alamat Rumah:</b><br>
+      Kp. / Dusun Kamurang, RT 022 / RW 004<br>
+      Desa Tanjungsari Barat,<br>
+      Kecamatan Cikaum,<br>
+      Kabupaten Subang,<br>
+      Jawa Barat 41256</p>
+      <p style="margin-top:12px;font-size:13px;color:#6b7280"></p>
+      <a href="https://maps.google.com/?q=Tanjung+Barat+Ciasem+Subang" target="_blank" style="display:inline-block;margin-top:10px;background:#0f766e;color:#fff;padding:9px 14px;border-radius:99px;font-size:13px;font-weight:700">📍 Lihat di Google Maps</a>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="card">
+      <h2>📩 Kontak</h2>
+      <div class="kontak">
+        <a href="https://wa.me/6285609548338" target="_blank">💬 WhatsApp<br><span style="font-weight:400;color:#374151">0856-0954-8338</span></a>
+        <a href="https://instagram.com/bungapsptsr_21" target="_blank">📸 Instagram<br><span style="font-weight:400;color:#374151">@bungapsptsr_21</span></a>
+        <a href="mailto:puspitasaribunga817@gmail.com">✉️ Email<br><span style="font-weight:400;color:#374151">puspitasaribunga817@gmail.com</span></a>
+      </div>
+    </div>
+
+    <!-- KEAHLIAN -->
+    <div class="card">
+      <h2>💡 Keahlian</h2>
+      <h3>Hard Skill</h3>
+      <span class="tag">HTML & CSS</span><span class="tag">JavaScript Dasar</span>
+      <span class="tag">Microsoft Word</span><span class="tag">Microsoft Excel</span>
+      <span class="tag">Canva</span><span class="tag">Database Dasar</span>
+      <span class="tag">Sistem Informasi</span><span class="tag">Data Analyst</span>
+
+      <h3>Soft Skill</h3>
+      <span class="tag">Komunikatif</span><span class="tag">Kerja Sama Tim</span>
+      <span class="tag">Tanggung Jawab</span><span class="tag">Manajemen Waktu</span>
+      <span class="tag">Public Speaking</span><span class="tag">Cepat Belajar</span>
+
+      <div style="margin-top:16px">
+        <div class="skill"><div class="skill-top"><span>MS Word & Excel</span><span>80%</span></div><div class="bar"><div class="fill" data-width="80%"></div></div></div>
+        <div class="skill"><div class="skill-top"><span>HTML, CSS, JS</span><span>70%</span></div><div class="bar"><div class="fill" data-width="70%"></div></div></div>
+        <div class="skill"><div class="skill-top"><span>Canva / Desain</span><span>75%</span></div><div class="bar"><div class="fill" data-width="75%"></div></div></div>
+        <div class="skill"><div class="skill-top"><span>Public Speaking</span><span>80%</span></div><div class="bar"><div class="fill" data-width="80%"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KOLOM KANAN -->
+  <div>
+    <div class="tabs">
+      <button class="active" onclick="bukaTab('tentang',this)">Tentang</button>
+      <button onclick="bukaTab('pendidikan',this)">Pendidikan</button>
+      <button onclick="bukaTab('pengalaman',this)">Pengalaman</button>
+      <button onclick="bukaTab('karir',this)">Tujuan Karir</button>
+    </div>
+
+    <!-- TENTANG -->
+    <div id="tentang" class="tab-content active">
+      <div class="card">
+        <h2>👋 Tentang Aku</h2>
+        <p>Halo! Kenalin, aku <b>Bunga Puspita Sari</b>, mahasiswi <b>Sistem Informasi</b> di <b>Universitas Mandiri Subang</b>. Aku berasal dari <b>Desa Tanjungsari Barat, Kecamatan Cikaum, Kabupaten Subang</b>.</p>
+        <p style="margin-top:10px">Aku adalah orang yang suka belajar hal baru, suka kerja bareng tim, dan suka kegiatan yang bermanfaat buat orang lain. Di kampus aku belajar tentang sistem informasi, database, pemrograman web, dan manajemen. Di luar kampus aku bekerja dan berusaha produktif.</p>
+        <p style="margin-top:10px"><b>Prinsipku:</b> "Belajar sungguh-sungguh, kerja dengan hati, dan jangan lupa bermanfaat untuk orang lain."</p>
+      </div>
+      <div class="card">
+        <h2>🎯 Minat & Hobi</h2>
+        <p>💻 Teknologi & Komputer &nbsp; | &nbsp; 📸 Fotografi & Dokumentasi &nbsp; | &nbsp; 📚 Belajar Hal Baru &nbsp; | &nbsp; 📺 Menonton Drama & Film &nbsp; | &nbsp; 📖 Membaca Novel |&nbsp; 🎶 Mendengarkan Musik </p>
+      </div>
+    </div>
+
+    <!-- PENDIDIKAN -->
+    <div id="pendidikan" class="tab-content">
+      <div class="card">
+        <h2>🎓 Riwayat Pendidikan</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="tahun">2026 - Sekarang</div>
+            <b>Universitas Mandiri Subang</b><br>
+            S1 - Sistem Informasi<br>
+            <span class="muted">Fokus: Sistem Informasi, Database, Pemrograman Web, Analisis Sistem</span><br>
+            <span class="muted">Kegiatan: Kuliah, Kerja, Membangun relasi</span>
+          </div>
+          <div class="t-item">
+            <div class="tahun">2020 - 2023</div>
+            <b>SMA / SMK - (SMAN 102 Jakarta)</b><br>
+            Jurusan: IPA<br>
+            <span class="muted">Lulus dengan baik, aktif di kegiatan sekolah</span>
+          </div>
+          <div class="t-item">
+            <div class="tahun">2017 - 2020</div>
+            <b>SMP - (MTsN 38 Jakarta)</b><br>
+            <span class="muted">Lulus</span>
+          </div>
+          <div class="t-item">
+            <div class="tahun">2011 - 2017</div>
+            <b>SD - (MI Imadun Najah)</b><br>
+            <span class="muted">Lulus</span>
+          </div>
+        </div>
+        <h3 style="margin-top:10px">📜 Sertifikat / Pelatihan</h3>
+        <ul style="margin-top:8px">
+          <li>Pelatihan Komputer / Microsoft Office - (2027)</li>
+          <li>Pelatihan / Seminar Sistem Informasi - (2028)</li>
+          <li>Pelatihan Desain Canva - (2029)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PENGALAMAN -->
+    <div id="pengalaman" class="tab-content">
+      <div class="card">
+        <h2>💼 Pengalaman Kerja & Organisasi</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="tahun">2024 - Sekarang</div>
+            <b>Operator produksi - PT TKG Taekwang Indonesia</b><br>
+            <span class="muted">Jl. Raya Cinangsi,Karanganyar, Kec. subang, Subang</span>
+            <ul style="margin-top:6px">
+              <li>Membantu tim agar mencapai target produk "N"</li>
+              <li>Memastikan hasil produk harus sesuai standar SOP</li>
+              <li>Membantu proses salah satu item produk "N"</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="tahun">2026 - Sekarang</div>
+            <b>Mahasiswi Aktif & Kegiatan Kampus</b><br>
+            <span class="muted">Universitas Mandiri Subang</span>
+            <ul style="margin-top:6px">
+              <li>Belajar membuat pemrograman web</li>
+              <li>Mengerjakan proyek kelompok mata kuliah</li>
+              <li>Membuat laporan, presentasi, dan desain kegiatan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TUJUAN KARIR -->
+    <div id="karir" class="tab-content">
+      <div class="tujuan">
+        <h2>🚀 Tujuan Karir Aku</h2>
+        <p><b>Jangka Pendek (1-2 Tahun):</b><br>
+       </p>
+        <ol>
+          <li>Mendapatkan nilai yang sangat baik di setiap mata kuliah - Universitas Mandiri Subang</li>
+          <li>Bisa naik jabatan dan mendapatkan gaji yang lebih tinggi</li>
+          <li>Bisa mendapatkan pekerjaan lain sebagai staff admin dengan gaji tinggi</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>🌟 Jangka Menengah (3-5 Tahun)</h2>
+        <ul>
+          <li>Lulus S1 Sistem Informasi - Universitas Mandiri Subang</li>
+          <li>Bekerja sebagai <b>Data Analyst, Staff IT, atau Admin sistem Informasi</b></li>
+          <li>Punya penghasilan usaha sendiri dan bisa membantu keluarga</li>
+        </ul>
+        <h2 style="margin-top:16px">💎 Jangka Panjang (5+ Tahun)</h2>
+        <ul>
+          <li>Menjadi orang yang ahli di bidang Sistem Informasi dan dipercaya di tempat kerja</li>
+          <li>Menjadi Data Analyst WFH di perusahaan besar seperti google </li>
+          <li>Membuka usaha / jasa sendiri di bidang IT & administrasi</li>
+        </ul>
+        <p style="margin-top:14px;background:#f0fdfa;padding:12px;border-radius:12px"><b>Moto Karir:</b><br><i>"Teknologi bukan cuma untuk kerja, tapi untuk memudahkan hidup orang lain."</i></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style="text-align:center;color:#888;font-size:13px;margin-top:8px">© 2026 Bunga Puspita Sari • Sistem Informasi - Universitas Mandiri Subang</p>
+</div>
+
+<div id="popup" onclick="tutupFoto()"><span>×</span><img id="popupImg" src=""></div>
+
+<script>
+function bukaTab(id,btn){
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // animasi skill
+  document.querySelectorAll('.fill').forEach(f=>{f.style.width=f.dataset.width});
+}
+let dark=false;
+function gantiMode(){
+  dark=!dark;
+  document.body.classList.toggle('dark',dark);
+  document.getElementById('modeBtn').innerText=dark?'☀️ Light Mode':'🌙 Dark Mode';
+}
+function bukaFoto(src){
+  document.getElementById('popupImg').src=src;
+  document.getElementById('popup').style.display='flex';
+}
+function tutupFoto(){document.getElementById('popup').style.display='none';}
+// animasi skill pas awal buka
+window.onload=()=>{document.querySelectorAll('.fill').forEach(f=>{f.style.width=f.dataset.width})};
+</script>
+</body>
+</html>
